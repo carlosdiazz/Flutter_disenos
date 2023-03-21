@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute: AppRoute.scrollDesignScrenn,
+      initialRoute: AppRoute.homeScreen,
       routes: AppRoute.getAppRoutes(),
       theme: AppTheme.dartTheme,
     );

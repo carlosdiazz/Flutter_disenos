@@ -5,10 +5,20 @@ class ScrollScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const boxDecoration = BoxDecoration(
+      gradient: LinearGradient(
+          colors: [Color(0xff5EE8C5), Color(0xff30BAD6)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          stops: [0.5, 0.5]),
+    );
     return Scaffold(
-      body: PageView(
-        scrollDirection: Axis.vertical,
-        children: [Page1(), Page1()],
+      body: Container(
+        decoration: boxDecoration,
+        child: PageView(
+          scrollDirection: Axis.vertical,
+          children: const [Page1(), Page2()],
+        ),
       ),
     );
   }
@@ -72,6 +82,30 @@ class MainContent extends StatelessWidget {
           Icon(Icons.keyboard_arrow_down_sharp, size: 100)
         ],
       ),
+    );
+  }
+}
+
+class Page2 extends StatelessWidget {
+  const Page2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Color(0xff30BAD6),
+      child: Center(
+          child: TextButton(
+        onPressed: () {},
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Text(
+            'Bienvenido',
+            style: TextStyle(fontSize: 30, color: Colors.white),
+          ),
+        ),
+        style: TextButton.styleFrom(
+            backgroundColor: Color(0xff0098FA), shape: StadiumBorder()),
+      )),
     );
   }
 }
