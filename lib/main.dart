@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute: AppRoute.homeScreen,
+      initialRoute: AppRoute.initialRoute,
       routes: AppRoute.getAppRoutes(),
       theme: AppTheme.dartTheme,
     );

@@ -1,3 +1,4 @@
+import 'package:disenos_flutter/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class ScrollScreen extends StatelessWidget {
@@ -19,6 +20,12 @@ class ScrollScreen extends StatelessWidget {
           scrollDirection: Axis.vertical,
           children: const [Page1(), Page2()],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, AppRoute.initialRoute);
+        },
+        child: Icon(Icons.arrow_back),
       ),
     );
   }

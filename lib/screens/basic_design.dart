@@ -1,3 +1,4 @@
+import 'package:disenos_flutter/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class BasicDesignScreen extends StatelessWidget {
@@ -26,6 +27,12 @@ class BasicDesignScreen extends StatelessWidget {
                 'Laborum cupidatat esse enim Lorem minim velit qui ut occaecat sit do ut labore. Aute non consequat et aliqua cillum amet elit ex cillum. Sit in enim anim sint irure sit. Do ea labore nisi laborum aute elit aute. Id sit pariatur aliqua minim velit. Culpa id anim ad anim quis nulla reprehenderit dolore velit nulla laboris laborum. Nisi enim occaecat qui veniam exercitation veniam cupidatat amet nisi et sint. Enim reprehenderit qui commodo ullamco mollit. Deserunt eu nisi aliqua sint occaecat quis incididunt. Nostrud velit nostrud aliqua velit eu eiusmod nostrud deserunt. Voluptate in irure nisi excepteur sunt laboris nostrud reprehenderit eiusmod pariatur aute dolore. Veniam eiusmod velit anim irure est. Sit do proident in velit nostrud ullamco. Laboris anim id dolor mollit exercitation eiusmod minim tempor sit sit anim proident.'),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, AppRoute.initialRoute);
+        },
+        child: Icon(Icons.arrow_back),
       ),
     );
   }
